@@ -1,5 +1,5 @@
 [package]
-name = "splitterrust-server"
+name = "splitterrust_server"
 version = "0.1.0"
 authors = ["Maximilian Konter <biskit1943@gmx.de>"]
 edition = "2018"

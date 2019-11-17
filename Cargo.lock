@@ -1264,15 +1264,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "splitterrust-server"
-version = "0.1.0"
-dependencies = [
- "actix-web 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "rand 0.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "splitterrust_db 0.1.0",
-]
-
-[[package]]
 name = "splitterrust_db"
 version = "0.1.0"
 dependencies = [
@@ -1280,6 +1271,15 @@ dependencies = [
  "dotenv 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.102 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.41 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "splitterrust_server"
+version = "0.1.0"
+dependencies = [
+ "actix-web 1.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand 0.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "splitterrust_db 0.1.0",
 ]
 
 [[package]]
