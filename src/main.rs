@@ -4,7 +4,14 @@ mod rest_api;
 use rest_api::entrypoints::index;
 use rest_api::entrypoints::get_spell_by_name as get_spell;
 
+use dotenv::dotenv;
+use log::info;
+
 fn main() {
+    dotenv().ok();
+    env_logger::init();
+
+    info!("Starting server");
     http()
 }
 
