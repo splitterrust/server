@@ -18,7 +18,7 @@ fn main() {
 
 fn http() {
     HttpServer::new(move || App::new().service(index).service(get_spell))
-        .bind("127.0.0.1:8088")
+        .bind("0.0.0.0:8088")
         .unwrap()
         .run()
         .unwrap();
