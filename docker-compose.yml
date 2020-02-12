@@ -23,12 +23,15 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8088:80
+        - 8088:8088
     networks:
       - default
     env_file: .env_docker
 
 networks:
   default:
-    external:
+      driver: bridge
+      driver_opts:
+          com.docker.network.enable_ipv6: "false"
+      external:
       name: my-network

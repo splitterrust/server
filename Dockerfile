@@ -1,6 +1,8 @@
 FROM rust:1.41 as builder
 WORKDIR /usr/src/splitterrust_server
-COPY . .
+COPY src ./src
+COPY db ./db
+COPY *.toml ./
 
 RUN apt-get update && \
     apt-get install -y postgresql postgresql-client
@@ -14,12 +16,12 @@ RUN apt-get update && apt-get install -y libpq5
 ENV SERVER /usr/local/bin/splitterrust_server
 
 COPY --from=builder /usr/local/cargo/bin/splitterrust_server $SERVER
-COPY docker_entrypoint.sh /user/local/bin/
+COPY docker_entrypoint.sh /usr/local/bin/
 
-RUN ln -s usr/local/bin/docker_entrypoint.sh / # backwards compat
+RUN ln -s /usr/local/bin/docker_entrypoint.sh / # backwards compat
 
 EXPOSE 8088
 
-#ENTRYPOINT ["docker_entrypoint.sh"]
+ENTRYPOINT ["docker_entrypoint.sh", "server"]
 
-CMD ["splitterrust_server"]
+#CMD ["splitterrust_server"]
