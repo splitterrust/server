@@ -30,8 +30,5 @@ services:
 
 networks:
   default:
-      driver: bridge
-      driver_opts:
-          com.docker.network.enable_ipv6: "false"
       external:
-      name: my-network
+        name: my-network
