@@ -4,7 +4,7 @@ services:
   db:
     image: postgres:12.1
     restart: always
-    env_file: ./.env
+    env_file: .env_docker
     ports:
       - 5433:5432
     networks:
@@ -23,9 +23,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8088:8088
+      - 8088:80
     networks:
       - default
+    env_file: .env_docker
 
 networks:
   default:

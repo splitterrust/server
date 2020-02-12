@@ -9,7 +9,7 @@ use log::info;
 
 fn main() {
     dotenv().ok();
-    std::env::set_var("RUST_LOG", "actix_web=info");
+    //std::env::set_var("RUST_LOG", "actix_web=info");
     env_logger::init();
 
     info!("Starting server");
