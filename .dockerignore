@@ -2,3 +2,8 @@ Cargo.lock
 **/target/
 Dockerfile
 docker-compose.yml
+REAMDE.md
+LICENSE
+.git/
+.gitignore
+.gitmodules
