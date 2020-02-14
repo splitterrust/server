@@ -1,4 +1,3 @@
-Cargo.lock
 **/target/
 Dockerfile
 docker-compose.yml

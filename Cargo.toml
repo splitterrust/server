@@ -15,7 +15,8 @@ written in rust for the splittermond P&P.
 [dependencies]
 actix-web = "1.0"
 rand = "0.7"
-splitterrust_db = { path = "./db" }
 dotenv = "0.15"
 log = "0.4"
 env_logger = "0.7"
+# keep this one in the last line till pushed/pulled from crates.io
+splitterrust_db = { path = "./db" }
