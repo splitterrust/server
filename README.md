@@ -16,19 +16,15 @@ abilities, items, spells, etc....
 
 ### Building
 
-There are two `Dockerfile`s, `Dockerfile` is for the release build, which is
-smaller as the development container and will probably also take longer to
-build. `Dockerfile.dev` will build (unoptimized) with the current changes which
-will result in a larger image.
-
 To build the release version:
 ```
 $ docker buid splitterrust_server:latest .
 ```
 
-To build the development version:
+To run it:
 ```
-$ docker build splitterrust_server:dev .
+$ docker run -p 8088:8088 -e \
+DATABASE_URL=postgres://splitterrust@localhost/splitterrust splitterrust:latest
 ```
 
 ### Environment
