@@ -24,7 +24,8 @@ $ docker buid splitterrust_server:latest .
 To run it:
 ```
 $ docker run -p 8088:8088 -e \
-DATABASE_URL=postgres://splitterrust@localhost/splitterrust splitterrust:latest
+    DATABASE_URL=postgres://splitterrust@localhost/splitterrust \
+    splitterrust_server:latest
 ```
 
 ### Environment
