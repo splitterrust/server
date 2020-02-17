@@ -27,3 +27,7 @@ services:
   discord:
     image: splitterrust_discord
     env_file: .env_docker
+    depends_on:
+      - server
+    links:
+      - server  # this enables dns resolution to the server container
