@@ -1,9 +1,18 @@
-use actix_web::{web, App, HttpResponse, HttpServer};
+use actix_web::{
+    web,
+    App,
+    HttpResponse,
+    HttpServer,
+};
 
 mod rest_api;
 use rest_api::entrypoints::get_spell_by_name as get_spell;
 use rest_api::entrypoints::index;
-use splitterrust_db::{establish_connection, PgPool, PgPooledConnection};
+use splitterrust_db::{
+    establish_connection,
+    PgPool,
+    PgPooledConnection,
+};
 
 use dotenv::dotenv;
 use log::info;

@@ -1,10 +1,15 @@
-use actix_web::{get, web, HttpResponse, Responder};
+use crate::pg_pool_handler;
+use actix_web::{
+    get,
+    web,
+    HttpResponse,
+    Responder,
+};
 use log::debug;
 use splitterrust_db::get_spell_by_name as get_spell;
 use splitterrust_db::get_spell_like_name as get_spells;
 use splitterrust_db::models::spell_schools::Spell as SpellSchools;
 use splitterrust_db::PgPool;
-use crate::pg_pool_handler;
 
 #[get("/")]
 pub fn index() -> impl Responder {
