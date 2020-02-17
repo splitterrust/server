@@ -60,7 +60,7 @@ splitterrust_server=debug,tokio_reactor=debug
 
 ### docker-compose
 
-There are two example `docker-compose.yml` which will build a complete stack of
+There is an example `docker-compose.yml` which will build a complete stack of
 server + database + discord.
 
 If you're like me and your running a VPN append this to the end of the
