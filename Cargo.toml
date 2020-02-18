@@ -9,6 +9,15 @@ description = """
 The RESt-API server implementation for splitterrust, a collections of utilities
 written in rust for the splittermond P&P.
 """
+exclude = [
+    ".env_docker",
+    ".rustfmt.toml",
+    ".travis.yml",
+    "docker-compose.yml",
+    "docker_entrypoint.sh",
+    "Dockerfile",
+    "PULL_REQUEST_TEMPLATE.md",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -18,4 +27,4 @@ rand = "0.7"
 dotenv = "0.15"
 log = "0.4"
 env_logger = "0.7"
-splitterrust_db = { path = "../db", version = "0.1.0" }
+splitterrust_db = "0.1.0"
