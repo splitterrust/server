@@ -6,6 +6,7 @@ Make sure these boxes are checked! 📦✅
 $ rustup override set nightly
 $ rustup component add rustfmt-preview --toolchain nightly
 ```
-- [ ] You ran `rustfmt` on the code base before submitting
+- [ ] You ran `cargo fmt -- --check` on the code base before submitting
+- [ ] You ran `cargo clippy` on the code base before submitting
 - [ ] You reference which issue is being closed in the PR text (if available)
 ✨✨ 😄 Thanks so much for contributing to wasm-pack! 😄 ✨✨
