@@ -1,5 +1,7 @@
 # Splitterrust-Server
 
+![Travis-CI][https://travis-ci.org/splitterrust/server.svg?branch=master]
+
 This server should serve all information about the game. This are classes,
 abilities, items, spells, etc....
 
