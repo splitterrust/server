@@ -28,3 +28,6 @@ dotenv = "0.15"
 log = "0.4"
 env_logger = "0.7"
 splitterrust_db = "0.1.0"
+
+#[patch.crates-io]
+#splitterrust_db = { path = '../db' }

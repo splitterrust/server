@@ -26,6 +26,9 @@ fn main() {
     http()
 }
 
+/// Serves the http server.
+///
+/// Curretnly port 8088 is used.
 fn http() {
     HttpServer::new(move || {
         App::new()
@@ -39,6 +42,13 @@ fn http() {
     .unwrap();
 }
 
+/// Extracts the PgPool from the actix data and returns it.
+///
+/// If the pool could not be extracted, a HttpResponse is returned.
+///
+/// # Arguments
+///
+/// * `pool`: The actix data from wich to extract.
 fn pg_pool_handler(pool: web::Data<PgPool>) -> Result<PgPooledConnection, HttpResponse> {
     pool.get()
         .map_err(|e| HttpResponse::InternalServerError().json(e.to_string()))
